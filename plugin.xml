@@ -1,0 +1,34 @@
+<plugin name='gsp-embed-resources' version='0.1' grailsVersion='2.0.1 &gt; *'>
+  <author>Joseph Faisal Nusairat</author>
+  <authorEmail>jnusairat@integrallis.com</authorEmail>
+  <title>GSP Embed Resources Plugin</title>
+  <description>
+This plugin allows for embeding of dynamic content directly inside the JS/CSS files that are colocated
+inside the web-app/ directory.
+
+This way instead of having to call via a GSP you can add application settings as well as call resource() so that images that are references will be given proper resource references directly in the CSS file.
+
+ie :
+.twistee-closed {
+	background-image: url("${resource(dir : 'images', file : 'd.png')}");
+
+</description>
+  <documentation>http://grails.org/plugin/gsp-embed-resources</documentation>
+  <type>GspEmbedResourcesGrailsPlugin</type>
+  <resources>
+    <resource>com.integrallis.mapper.DynamicEmbedResourceMapper</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://plugins.grails.org' />
+    <repository name='http://repo.grails.org/grails/plugins' url='http://repo.grails.org/grails/plugins/' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='grailsCore' url='http://svn.codehaus.org/grails/trunk/grails-plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies />
+  <plugins />
+  <runtimePluginRequirements>
+    <plugin name='resources' version='1.0.RC3 &gt; *' />
+  </runtimePluginRequirements>
+  <behavior />
+</plugin>
